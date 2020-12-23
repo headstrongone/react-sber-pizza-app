@@ -10,8 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="added misc for html templates">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app.">
+      <change afterPath="$PROJECT_DIR$/src/Button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -56,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="7219000" />
+      <workItem from="1608715514455" duration="15774000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -79,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608718881231</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app.">
+      <created>1608723682997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608723682997</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +112,8 @@
     <MESSAGE value="react created" />
     <MESSAGE value="added html templates" />
     <MESSAGE value="added misc for html templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="added misc for html templates" />
+    <MESSAGE value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
   </component>
   <component name="WindowStateProjectService">
     <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog" timestamp="1608721341416">
@@ -111,11 +124,27 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="771" y="1378" width="424" height="491" key="FileChooserDialogImpl/56.27.1864.2133@56.27.1864.2133" timestamp="1608719432057" />
-    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor" timestamp="1608719434575">
+    <state width="1134" height="266" key="GridCell.Tab.0.bottom" timestamp="1608728531104">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state width="1134" height="266" key="GridCell.Tab.0.bottom/56.27.1864.2133@56.27.1864.2133" timestamp="1608728531104" />
+    <state width="1134" height="266" key="GridCell.Tab.0.center" timestamp="1608728531104">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state width="1134" height="266" key="GridCell.Tab.0.center/56.27.1864.2133@56.27.1864.2133" timestamp="1608728531104" />
+    <state width="1134" height="266" key="GridCell.Tab.0.left" timestamp="1608728531103">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state width="1134" height="266" key="GridCell.Tab.0.left/56.27.1864.2133@56.27.1864.2133" timestamp="1608728531103" />
+    <state width="1134" height="266" key="GridCell.Tab.0.right" timestamp="1608728531104">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state width="1134" height="266" key="GridCell.Tab.0.right/56.27.1864.2133@56.27.1864.2133" timestamp="1608728531104" />
+    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor" timestamp="1608724110230">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
-    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608719434575" />
+    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608724110230" />
     <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608722646689">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
