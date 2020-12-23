@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="added misc for html templates">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1m3HlqHFI3LcTp0rkdQc0uEWctD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/scss/assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="" />
+      <created>1608715511179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608715511179</updated>
+      <workItem from="1608715514455" duration="7219000" />
+    </task>
+    <task id="LOCAL-00001" summary="react created">
+      <created>1608716947910</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608716947910</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added html templates">
+      <created>1608718845411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608718845412</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added misc for html templates">
+      <created>1608718881231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608718881231</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="react created" />
+    <MESSAGE value="added html templates" />
+    <MESSAGE value="added misc for html templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="added misc for html templates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog" timestamp="1608721341416">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog/56.27.1864.2133@56.27.1864.2133" timestamp="1608721341416" />
+    <state x="771" y="1378" width="424" height="491" key="FileChooserDialogImpl" timestamp="1608719432057">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="771" y="1378" width="424" height="491" key="FileChooserDialogImpl/56.27.1864.2133@56.27.1864.2133" timestamp="1608719432057" />
+    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor" timestamp="1608719434575">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
+    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608719434575" />
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608722646689">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608722646689" />
+    <state x="651" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608719417885">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="651" y="259" width="672" height="678" key="search.everywhere.popup/56.27.1864.2133@56.27.1864.2133" timestamp="1608719417885" />
+  </component>
+</project>
