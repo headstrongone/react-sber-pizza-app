@@ -10,14 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="cart button added">
-      <change afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="folder system changed,  rewrote list of categories">
+      <change afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="17552000" />
+      <workItem from="1608715514455" duration="21421000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608732874893</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="folder system changed,  rewrote list of categories">
+      <created>1608734807694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608734807694</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,9 +131,14 @@
     <MESSAGE value="added misc for html templates" />
     <MESSAGE value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
     <MESSAGE value="cart button added" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart button added" />
+    <MESSAGE value="folder system changed,  rewrote list of categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder system changed,  rewrote list of categories" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/56.27.1864.2133@56.27.1864.2133" timestamp="1608735076744" />
     <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog" timestamp="1608721341416">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
