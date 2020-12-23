@@ -10,18 +10,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="categories done, sort popup started">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="create simple routing homepage-cart">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="27776000" />
+      <workItem from="1608715514455" duration="29749000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -114,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608739576519</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sort popup done">
+      <created>1608748266460</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608748266460</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create simple routing homepage-cart">
+      <created>1608750027164</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608750027164</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +156,9 @@
     <MESSAGE value="cart button added" />
     <MESSAGE value="folder system changed,  rewrote list of categories" />
     <MESSAGE value="categories done, sort popup started" />
-    <option name="LAST_COMMIT_MESSAGE" value="categories done, sort popup started" />
+    <MESSAGE value="sort popup done" />
+    <MESSAGE value="create simple routing homepage-cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="create simple routing homepage-cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
@@ -175,10 +194,10 @@
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
     <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608733248594" />
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608722646689">
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608750178745">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608722646689" />
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608750178745" />
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608740299251">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
