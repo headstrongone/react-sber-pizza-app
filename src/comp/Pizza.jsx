@@ -1,27 +1,53 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Pizza = () => {
+const Pizza = ({ name, cost, image, types, sizes }) => {
+    const [size, setSize] = useState(0);
+    const [type, setType] = useState(0);
+    const [price, setPrice] = useState(0);
+
+    const onSelectSize = (index) => {
+        setSize(index);
+        setPrice(index);
+    }
+
+    const onSelectType = (index) => {
+        setType(index);
+    }
+
     return (
         <div className="pizza-block">
             <img
                 className="pizza-block__image"
-                src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                src={image}
                 alt="Pizza"
             />
-            <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+            <h4 className="pizza-block__title">{name}</h4>
             <div className="pizza-block__selector">
                 <ul>
-                    <li className="active">тонкое</li>
-                    <li>традиционное</li>
+                    {types &&
+                    types.map((item, index) =>  (
+                        <li
+                            onClick={() => onSelectType(index)}
+                            className={type === index ? 'active' : ''}
+                            key={`${item}_${index}`}>
+                            {item}
+                        </li>
+                    ))}
                 </ul>
                 <ul>
-                    <li className="active">26 см.</li>
-                    <li>30 см.</li>
-                    <li>40 см.</li>
+                    {sizes &&
+                    sizes.map((item, index) =>  (
+                        <li
+                            onClick={() => onSelectSize(index)}
+                            className={size === index ? 'active' : ''}
+                            key={`${item}_${index}`}>
+                            {item}
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className="pizza-block__bottom">
-                <div className="pizza-block__price">от 395 ₽</div>
+                <div className="pizza-block__price">{`от ${cost[price]} Р`}</div>
                 <div className="button button--outline button--add">
                     <svg
                         width="12"

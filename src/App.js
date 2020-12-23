@@ -10,17 +10,15 @@ function App() {
         fetch('http://localhost:3004/database.json')
             .then((response) => response.json())
             .then((json) => {
-                setState(json.state);
+                setState(json.pizzaList);
             });
     }, []);
-
-    console.log(state);
 
     return (
         <div className="wrapper">
             <Header />
             <div className="content">
-                <Route path="/" component={Home} exact/>
+                <Route path="/" render={() => <Home values={state}/>} exact/>
                 <Route path="/cart" component={Cart} exact/>
             </div>
         </div>

@@ -10,15 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="create simple routing homepage-cart">
-      <change afterPath="$PROJECT_DIR$/public/database.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp/Pizza.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="pizza blocks fully imported to react">
+      <change beforePath="$PROJECT_DIR$/src/comp/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Pizza.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="31745000" />
+      <workItem from="1608715514455" duration="34885000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -145,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608750198477</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="pizza transfer to another component">
+      <created>1608752294060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608752294060</updated>
+    </task>
+    <task id="LOCAL-00012" summary="pizza blocks fully imported to react">
+      <created>1608755211758</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608755211758</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +179,9 @@
     <MESSAGE value="categories done, sort popup started" />
     <MESSAGE value="sort popup done" />
     <MESSAGE value="create simple routing homepage-cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="create simple routing homepage-cart" />
+    <MESSAGE value="pizza transfer to another component" />
+    <MESSAGE value="pizza blocks fully imported to react" />
+    <option name="LAST_COMMIT_MESSAGE" value="pizza blocks fully imported to react" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">

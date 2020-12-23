@@ -1,7 +1,7 @@
 import React from 'react';
 import {Categories, Sort, Pizza} from "../comp";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="container">
             <div className="content__top">
@@ -21,13 +21,10 @@ const Home = () => {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-             <Pizza />
-             <Pizza />
-             <Pizza />
-             <Pizza />
-             <Pizza />
-             <Pizza />
-             <Pizza />
+                {
+                    props.values.map((obj) => (
+                        <Pizza key={obj.id} name={obj.name} image={obj.imageUrl} cost={obj.price} sizes={obj.sizes} types={obj.types}/>))
+                }
             </div>
         </div>
     );
