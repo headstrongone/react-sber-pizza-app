@@ -11,8 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="create simple routing homepage-cart">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/database.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp/Pizza.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +60,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/comp" />
+      <recent name="$PROJECT_DIR$/src/routing" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/scss/assets" />
     </key>
@@ -66,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="29749000" />
+      <workItem from="1608715514455" duration="31745000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -131,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608750027164</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="create simple routing homepage-cart">
+      <created>1608750198477</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608750198477</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,10 +208,10 @@
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
     <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608733248594" />
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608750178745">
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608750228204">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608750178745" />
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608750228204" />
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608740299251">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>

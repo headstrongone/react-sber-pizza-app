@@ -17,7 +17,6 @@ const Sort = ({variables}) => {
 
     useEffect(() => {
         document.body.addEventListener('click', handleOutsideClick);
-        console.log(sortRef)
     }, []);
 
     const onSelectItem = (index) => {
