@@ -2,14 +2,13 @@ import React from 'react';
 import { Header, Categories, Sort} from './comp';
 
 function App() {
-
     return (
         <div className="wrapper">
             <Header />
             <div className="content">
                 <div className="container">
                     <div className="content__top">
-                        <Categories onClickItem={(name) => console.log(name)} items={[
+                        <Categories items={[
                             'Все',
                             'Мясные',
                             'Вегетерианские',
@@ -17,7 +16,11 @@ function App() {
                             'Острые',
                             'Закрытые'
                         ]} />
-                        <Sort />
+                        <Sort variables={[
+                            'популярности',
+                            'цене',
+                            'алфавиту'
+                        ]} />
                     </div>
                     <h2 className="content__title">Все пиццы</h2>
                     <div className="content__items">

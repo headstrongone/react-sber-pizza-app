@@ -10,14 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="folder system changed,  rewrote list of categories">
-      <change afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="categories done, sort popup started">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="21421000" />
+      <workItem from="1608715514455" duration="27776000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -108,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608734807694</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="categories done, sort popup started">
+      <created>1608739576519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608739576519</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +138,8 @@
     <MESSAGE value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
     <MESSAGE value="cart button added" />
     <MESSAGE value="folder system changed,  rewrote list of categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder system changed,  rewrote list of categories" />
+    <MESSAGE value="categories done, sort popup started" />
+    <option name="LAST_COMMIT_MESSAGE" value="categories done, sort popup started" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
@@ -172,6 +179,10 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608722646689" />
+    <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608740299251">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608740299251" />
     <state x="651" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608719417885">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
