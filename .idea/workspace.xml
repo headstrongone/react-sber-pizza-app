@@ -10,22 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="added proptypes">
-      <change afterPath="$PROJECT_DIR$/src/redux/action/filters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/filters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="starting redux, added some kind of storage + filters.js">
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Pizza.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/action/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/pizza.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="43174000" />
+      <workItem from="1608715514455" duration="44793000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -197,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608757760377</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="starting redux, added some kind of storage + filters.js">
+      <created>1608763822006</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608763822006</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +225,8 @@
     <MESSAGE value="pizza blocks fully imported to react" />
     <MESSAGE value="added axios for getting pizza database instead of common js fetch" />
     <MESSAGE value="added proptypes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added proptypes" />
+    <MESSAGE value="starting redux, added some kind of storage + filters.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting redux, added some kind of storage + filters.js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
@@ -276,6 +274,10 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608740299251" />
+    <state x="251" y="252" key="run.anything.popup" timestamp="1608764391843">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="251" y="252" key="run.anything.popup/56.27.1864.2133@56.27.1864.2133" timestamp="1608764391843" />
     <state x="651" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608719417885">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
