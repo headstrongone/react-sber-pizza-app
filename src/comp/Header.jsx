@@ -1,5 +1,5 @@
 import React from 'react';
-import mainLogo from "./scss/assets/img/pizza-logo.svg";
+import mainLogo from "../scss/assets/img/pizza-logo.svg";
 import Button from './Button.jsx';
 
 function Header() {

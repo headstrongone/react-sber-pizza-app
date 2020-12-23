@@ -3,7 +3,6 @@ import classNames from 'classnames';
 
 function Button(props) {
     const {className, outline, children, onClick} = props;
-    console.log(className, outline, children, onClick)
     return (
         <button
             onClick={onClick}

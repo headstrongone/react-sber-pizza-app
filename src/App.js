@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header.jsx';
+import { Header, Categories} from './comp';
 
 function App() {
     return (
@@ -8,16 +8,13 @@ function App() {
             <div className="content">
                 <div className="container">
                     <div className="content__top">
-                        <div className="categories">
-                            <ul>
-                                <li className="active">Все</li>
-                                <li>Мясные</li>
-                                <li>Вегетарианская</li>
-                                <li>Гриль</li>
-                                <li>Острые</li>
-                                <li>Закрытые</li>
-                            </ul>
-                        </div>
+                        <Categories items={[
+                            'Мясные',
+                            'Вегетерианские',
+                            'Гриль',
+                            'Острые',
+                            'Закрытые'
+                        ]} />
                         <div className="sort">
                             <div className="sort__label">
                                 <svg

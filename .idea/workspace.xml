@@ -10,13 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app.">
-      <change afterPath="$PROJECT_DIR$/src/Button.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Header.jsx" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="cart button added">
+      <change afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +46,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/comp" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/scss/assets" />
     </key>
   </component>
@@ -61,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="15774000" />
+      <workItem from="1608715514455" duration="17552000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -91,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608723682997</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cart button added">
+      <created>1608732874893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608732874893</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +123,8 @@
     <MESSAGE value="added html templates" />
     <MESSAGE value="added misc for html templates" />
     <MESSAGE value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;created react app, added html+sass templates, moving index page from html template to react-app." />
+    <MESSAGE value="cart button added" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart button added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog" timestamp="1608721341416">
@@ -140,11 +151,11 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state width="1134" height="266" key="GridCell.Tab.0.right/56.27.1864.2133@56.27.1864.2133" timestamp="1608728531104" />
-    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor" timestamp="1608724110230">
+    <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor" timestamp="1608733248594">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
-    <state x="477" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608724110230" />
+    <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608733248594" />
     <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608722646689">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
