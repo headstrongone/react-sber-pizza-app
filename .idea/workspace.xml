@@ -11,7 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="added proptypes">
+      <change afterPath="$PROJECT_DIR$/src/redux/action/filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Pizza.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +58,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/comp" />
       <recent name="$PROJECT_DIR$/src/routing" />
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/scss/assets" />
     </key>
   </component>
@@ -66,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="36891000" />
+      <workItem from="1608715514455" duration="43174000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -173,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608757083214</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added proptypes">
+      <created>1608757760377</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608757760377</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +235,10 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/56.27.1864.2133@56.27.1864.2133" timestamp="1608735076744" />
+    <state x="233" y="27" width="1491" height="1053" key="DiffContextDialog" timestamp="1608757780655">
+      <screen x="56" y="27" width="1864" height="2133" />
+    </state>
+    <state x="233" y="27" width="1491" height="1053" key="DiffContextDialog/56.27.1864.2133@56.27.1864.2133" timestamp="1608757780655" />
     <state x="327" y="327" width="722" height="460" key="EditFileWatcherDialog" timestamp="1608721341416">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
@@ -240,10 +268,10 @@
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
     <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608733248594" />
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608750228204">
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608757796926">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608750228204" />
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608757796926" />
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608740299251">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>

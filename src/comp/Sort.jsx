@@ -4,6 +4,7 @@ const Sort = ({variables}) => {
     const [visibilityOfPop, setVisibility] = useState(false);
     const [selectedItem, setSelectedItem] = useState(0);
     const sortRef = useRef();
+    const activeItem = variables[selectedItem].name;
 
     const toggleVisibility = () => {
         setVisibility(!visibilityOfPop)
@@ -42,18 +43,18 @@ const Sort = ({variables}) => {
                     />
                 </svg>
                 <b>Сортировка по:</b>
-                <span onClick={toggleVisibility}>{variables[selectedItem]}</span>
+                <span onClick={toggleVisibility}>{activeItem}</span>
             </div>
             {visibilityOfPop && (
             <div className="sort__popup">
                 <ul>
                     {variables &&
-                        variables.map((item, index) =>  (
+                        variables.map((obj, index) =>  (
                             <li
                                 onClick={() => onSelectItem(index)}
                                 className={selectedItem === index ? 'active' : ''}
-                                key={`${item}_${index}`}>
-                                {item}
+                                key={`${obj.type}_${index}`}>
+                                {obj.name}
                             </li>
                             ))}
                 </ul>

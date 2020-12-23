@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import ClassNames from 'classnames';
 
 const Pizza = ({ name, cost, image, types, sizes }) => {
     const [size, setSize] = useState(0);
