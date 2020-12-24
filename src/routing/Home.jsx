@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {categories, sort} from '../constants/Constants'
 import { Categories, Sort, Pizza, PizzaContentLoader} from "../comp";
 import { getPizzas } from "../redux/action/pizza";
-import { addToCart }from '../redux/action/cart.js';
+import { addToCart, deleteFromCart }from '../redux/action/cart.js';
 import {setCategory, setSortBy} from '../redux/action/filters'
 
 
@@ -36,6 +36,10 @@ const Home = () => {
         dispatch(addToCart(pizza))
     }, []);
 
+    const onPizzaDeleteFromCard = useCallback((pizza) => {
+        dispatch(deleteFromCart(pizza));
+    }, []);
+
     return (
         <div className="container">
             <div className="content__top">
@@ -61,6 +65,7 @@ const Home = () => {
                                sizes={obj.sizes}
                                types={obj.types}
                                addPizzaToCard={onAddPizzaToCard}
+                               deletePizzaFromCard={onPizzaDeleteFromCard}
                                totalAdded={cartItems[obj.id] ? cartItems[obj.id].length : ''}
                         />)
                     ) : Array(10).fill(0).map((el, key) => <PizzaContentLoader key={key}/>)
