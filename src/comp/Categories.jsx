@@ -1,21 +1,14 @@
-import React, {useState, memo} from 'react';
+import React, {memo} from 'react';
+import PropTypes from "prop-types";
 
-//см. Sort.jsx
-
-const Categories = memo(function Categories({items, onClickItem}){
-    const [state, setState] = useState(0);
-
-    const onSelectItem = (index) => {
-        setState(index);
-        onClickItem(index)
-    }
+const Categories = memo(function Categories({activeCategoryIndex, items, onClickItem}){
     return (
         <div className="categories">
             <ul>
                 {items.map((item, index) => (
                     <li
-                        className={ state === index ? 'active' : '' }
-                        onClick={ () => onSelectItem(index) }
+                        className={ activeCategoryIndex === index ? 'active' : '' }
+                        onClick={ () => onClickItem(index) }
                         key={ ` ${item}_${index}`}>
                         {item}
                     </li>
@@ -24,5 +17,16 @@ const Categories = memo(function Categories({items, onClickItem}){
         </div>
     );
 });
+
+Categories.propTypes = {
+    activeCategoryIndex: PropTypes.number.isRequired,
+    items: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onClickItem: PropTypes.func
+};
+
+Categories.defaultProps = {
+    activeCategoryIndex: 0,
+    items: []
+};
 
 export default Categories;

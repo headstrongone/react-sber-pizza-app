@@ -1,14 +1,14 @@
 import React, {useState, useEffect, useRef, memo} from 'react';
+import PropTypes from 'prop-types';
 
-//используем мемо для оптимизации приложения, избегая повторного рендеринга
+//используем react memo для оптимизации приложения, избегая повторного рендеринга
 //мы смотрим, меняется ли пропс variables, и, если меняется - ререндерим
 //компонент
 
-const Sort = memo(function Sort({variables}) {
+const Sort = memo(function Sort({activeSortType, variables, onClickSortType}) {
     const [visibilityOfPop, setVisibility] = useState(false);
-    const [selectedItem, setSelectedItem] = useState(0);
     const sortRef = useRef();
-    const activeItem = variables[selectedItem].name;
+    const activeItem = variables.find((obj) => obj.type === activeSortType).name;
 
     const toggleVisibility = () => {
         setVisibility(!visibilityOfPop)
@@ -25,7 +25,7 @@ const Sort = memo(function Sort({variables}) {
     }, []);
 
     const onSelectItem = (index) => {
-        setSelectedItem(index);
+        onClickSortType(index);
         setVisibility(false);
     }
 
@@ -55,8 +55,8 @@ const Sort = memo(function Sort({variables}) {
                     {variables &&
                         variables.map((obj, index) =>  (
                             <li
-                                onClick={() => onSelectItem(index)}
-                                className={selectedItem === index ? 'active' : ''}
+                                onClick={() => onSelectItem(obj.type)}
+                                className={activeSortType === obj.type ? 'active' : ''}
                                 key={`${obj.type}_${index}`}>
                                 {obj.name}
                             </li>
@@ -67,5 +67,15 @@ const Sort = memo(function Sort({variables}) {
         </div>
     );
 });
+
+
+Sort.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+Sort.defaultProps = {
+    items: [],
+};
+
 
 export default Sort;

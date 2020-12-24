@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect} from 'react';
 import { Categories, Sort, Pizza, PizzaContentLoader} from "../comp";
 import { useDispatch, useSelector } from "react-redux";
-import { setCategory } from '../redux/action/filters'
+import {setCategory, setSortBy} from '../redux/action/filters'
 import {categories, sort} from '../constants/Constants'
 import {getPizzas} from "../redux/action/pizza";
 
@@ -9,30 +9,39 @@ import {getPizzas} from "../redux/action/pizza";
 const Home = () => {
     const dispatch = useDispatch();
 
-    const { pizzaArray, isLoaded } = useSelector( (state) => {
+    const { pizzaArray, isLoaded, filters } = useSelector( (state) => {
         return {
             pizzaArray: state.pizzaReducer.items, //take array of pizza  from redux store
-            isLoaded: state.pizzaReducer.isLoaded
+            isLoaded: state.pizzaReducer.isLoaded,
+            filters: state.filtersReducer
         };
     });
 
     useEffect(() => {
-        if (pizzaArray.length === 0 ) dispatch(getPizzas());
-    }, []);
+        dispatch(getPizzas());
+    }, [filters.category]);
 
 
     const onSelectCategory = useCallback((index) => {
         dispatch(setCategory(index))
     }, []);
 
+    const onSelectSortType= useCallback((type) => {
+        dispatch(setSortBy(type))
+    }, []);
+
+
     return (
         <div className="container">
             <div className="content__top">
                 <Categories
+                    activeCategoryIndex={filters.category}
                     onClickItem={onSelectCategory}
                     items={categories} />
                 <Sort
+                    activeSortType={filters.sortBy}
                     variables={sort}
+                    onClickSortType={onSelectSortType}
                 />
             </div>
             <h2 className="content__title">Все пиццы</h2>
@@ -46,8 +55,8 @@ const Home = () => {
                                cost={obj.price}
                                sizes={obj.sizes}
                                types={obj.types}/>)
-                    ) : Array(10).fill(<PizzaContentLoader />)
-                };
+                    ) : Array(10).fill(0).map((el, key) => <PizzaContentLoader key={key}/>)
+                }
             </div>
         </div>
     );
