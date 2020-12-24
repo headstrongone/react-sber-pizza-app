@@ -15,6 +15,9 @@ const Pizza = ({ name, cost, image, types, sizes }) => {
         setType(index);
     }
 
+
+
+
     return (
         <div className="pizza-block">
             <img
