@@ -10,12 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="starting redux, added some kind of storage + filters.js">
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="save before refactoring all hooks to redux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/action/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/pizza.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="44793000" />
+      <workItem from="1608715514455" duration="48168000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608763822006</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="save before refactoring all hooks to redux">
+      <created>1608765335353</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608765335353</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +231,8 @@
     <MESSAGE value="added axios for getting pizza database instead of common js fetch" />
     <MESSAGE value="added proptypes" />
     <MESSAGE value="starting redux, added some kind of storage + filters.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting redux, added some kind of storage + filters.js" />
+    <MESSAGE value="save before refactoring all hooks to redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="save before refactoring all hooks to redux" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
@@ -274,10 +280,10 @@
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608740299251" />
-    <state x="251" y="252" key="run.anything.popup" timestamp="1608764391843">
+    <state x="251" y="252" key="run.anything.popup" timestamp="1608768319297">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
-    <state x="251" y="252" key="run.anything.popup/56.27.1864.2133@56.27.1864.2133" timestamp="1608764391843" />
+    <state x="251" y="252" key="run.anything.popup/56.27.1864.2133@56.27.1864.2133" timestamp="1608768319297" />
     <state x="651" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608719417885">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
