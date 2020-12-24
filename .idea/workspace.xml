@@ -10,14 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="rewrote (bad style) App.js to redux class component">
-      <change afterPath="$PROJECT_DIR$/src/constants/Constants.js" afterDir="false" />
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="edit App.js using redux hooks, added react.memo for application optimization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/action/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/action/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="57204000" />
+      <workItem from="1608715514455" duration="60960000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -217,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608769540737</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="edit App.js using redux hooks, added react.memo for application optimization">
+      <created>1608818594708</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608818594708</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +258,8 @@
     <MESSAGE value="save before refactoring all hooks to redux" />
     <MESSAGE value="rewrote (bad style) App.js to redux container" />
     <MESSAGE value="rewrote (bad style) App.js to redux class component" />
-    <option name="LAST_COMMIT_MESSAGE" value="rewrote (bad style) App.js to redux class component" />
+    <MESSAGE value="edit App.js using redux hooks, added react.memo for application optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit App.js using redux hooks, added react.memo for application optimization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
