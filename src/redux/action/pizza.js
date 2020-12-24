@@ -4,7 +4,7 @@ import axios from "axios";
 export const getPizzas = (category, sortBy) => (dispatch) => {
     dispatch(setLoaded(false));
     axios.get(`http://localhost:3000/pizzaList?${category ?
-        `category=${category}` : ``}&_sort=${sortBy}&_order=desc`).then(({data}) => {
+        `category=${category}` : ``}&_sort=${sortBy}&_order=asc`).then(({data}) => {
         dispatch(setPizza(data)); //push data to redux store
     });
 };

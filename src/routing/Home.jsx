@@ -1,18 +1,20 @@
 import React, {useCallback, useEffect} from 'react';
-import { Categories, Sort, Pizza, PizzaContentLoader} from "../comp";
 import { useDispatch, useSelector } from "react-redux";
-import {setCategory, setSortBy} from '../redux/action/filters'
 import {categories, sort} from '../constants/Constants'
-import {getPizzas} from "../redux/action/pizza";
+import { Categories, Sort, Pizza, PizzaContentLoader} from "../comp";
+import { getPizzas } from "../redux/action/pizza";
+import { addToCart }from '../redux/action/cart.js';
+import {setCategory, setSortBy} from '../redux/action/filters'
 
 
 const Home = () => {
     const dispatch = useDispatch();
 
-    const { pizzaArray, isLoaded, filters } = useSelector( (state) => {
+    const { pizzaArray, isLoaded, filters, cartItems } = useSelector( (state) => {
         return {
             pizzaArray: state.pizzaReducer.items, //take array of pizza  from redux store
             isLoaded: state.pizzaReducer.isLoaded,
+            cartItems: state.cartReducer.totalItems,
             filters: state.filtersReducer
         };
     });
@@ -30,6 +32,9 @@ const Home = () => {
         dispatch(setSortBy(type))
     }, []);
 
+    const onAddPizzaToCard = useCallback((pizza) => {
+        dispatch(addToCart(pizza))
+    }, []);
 
     return (
         <div className="container">
@@ -49,12 +54,15 @@ const Home = () => {
                 {
                     isLoaded ? pizzaArray.map((obj) => (
                         <Pizza key={obj.id}
-                               isLoading={true}
+                               id={obj.id}
                                name={obj.name}
                                image={obj.imageUrl}
                                cost={obj.price}
                                sizes={obj.sizes}
-                               types={obj.types}/>)
+                               types={obj.types}
+                               addPizzaToCard={onAddPizzaToCard}
+                               totalAdded={cartItems[obj.id] ? cartItems[obj.id].length : ''}
+                        />)
                     ) : Array(10).fill(0).map((el, key) => <PizzaContentLoader key={key}/>)
                 }
             </div>

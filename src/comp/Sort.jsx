@@ -15,7 +15,8 @@ const Sort = memo(function Sort({activeSortType, variables, onClickSortType}) {
     };
 
     const handleOutsideClick = (e) => {
-        if (!e.path.includes(sortRef.current)){
+        const path = e.path || (e.composedPath && e.composedPath());
+        if (!path.includes(sortRef.current)){
             setVisibility(false);
         }
     };

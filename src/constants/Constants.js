@@ -18,6 +18,6 @@ export const sort = [
     },
     {
         name: 'алфавиту',
-        type: 'alphabet'
+        type: 'name'
     }
 ];

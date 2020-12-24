@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import Button from "./Button";
 
-const Pizza = ({ name, cost, image, types, sizes }) => {
+const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, totalAdded}) => {
     const [size, setSize] = useState(0);
     const [type, setType] = useState(0);
     const [price, setPrice] = useState(0);
@@ -14,6 +15,21 @@ const Pizza = ({ name, cost, image, types, sizes }) => {
     const onSelectType = (index) => {
         setType(index);
     }
+
+    const handleAddPizza = () => {
+        const _price = cost[price];
+        const _type = types[type];
+        const _size = sizes[size];
+        const obj = {
+          id,
+          name,
+          image,
+          price: _price,
+            size: _size,
+            type: _type
+        };
+        addPizzaToCard(obj)
+    };
 
     return (
         <div className="pizza-block">
@@ -48,23 +64,19 @@ const Pizza = ({ name, cost, image, types, sizes }) => {
                 </ul>
             </div>
             <div className="pizza-block__bottom">
-                <div className="pizza-block__price">{`от ${cost[price]} Р`}</div>
-                <div className="button button--outline button--add">
-                    <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
+                <div className="pizza-block__price">{`от ${cost[price]} ₽`}</div>
+                <Button
+                    onClick={handleAddPizza}
+                    className='button--add'
+                    outline>
+
                         <path
                             d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
                             fill="white"
                         />
-                    </svg>
                     <span>Добавить</span>
-                    <i>2</i>
-                </div>
+                    {totalAdded ? <i>{totalAdded}</i> : ''}
+                </Button>
             </div>
         </div>
     );
@@ -77,6 +89,7 @@ Pizza.propTypes = {
     types: PropTypes.arrayOf(PropTypes.string).isRequired,
     sizes: PropTypes.arrayOf(PropTypes.number).isRequired
 };
+
 Pizza.defaultProps = {
     name: 'testing',
     image: '',
@@ -84,4 +97,5 @@ Pizza.defaultProps = {
     types: ['test', 'test'],
     sizes: [1, 2, 3]
 }
+
 export default Pizza;
