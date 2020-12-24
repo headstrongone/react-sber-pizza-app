@@ -18,8 +18,8 @@ const Home = () => {
     });
 
     useEffect(() => {
-        dispatch(getPizzas());
-    }, [filters.category]);
+        dispatch(getPizzas(filters.category, filters.sortBy));
+    }, [filters.category, filters.sortBy]);
 
 
     const onSelectCategory = useCallback((index) => {
