@@ -1,6 +1,10 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, memo} from 'react';
 
-const Sort = ({variables}) => {
+//используем мемо для оптимизации приложения, избегая повторного рендеринга
+//мы смотрим, меняется ли пропс variables, и, если меняется - ререндерим
+//компонент
+
+const Sort = memo(function Sort({variables}) {
     const [visibilityOfPop, setVisibility] = useState(false);
     const [selectedItem, setSelectedItem] = useState(0);
     const sortRef = useRef();
@@ -62,6 +66,6 @@ const Sort = ({variables}) => {
             )}
         </div>
     );
-};
+});
 
 export default Sort;

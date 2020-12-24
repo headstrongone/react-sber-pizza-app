@@ -10,10 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="save before refactoring all hooks to redux">
+    <list default="true" id="e749bbe7-5292-4b3e-bcd1-2e5a12df705c" name="Default Changelist" comment="rewrote (bad style) App.js to redux class component">
+      <change afterPath="$PROJECT_DIR$/src/constants/Constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/action/pizza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/pizza.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/action/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routing/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608715511179</updated>
-      <workItem from="1608715514455" duration="48168000" />
+      <workItem from="1608715514455" duration="57204000" />
     </task>
     <task id="LOCAL-00001" summary="react created">
       <created>1608716947910</created>
@@ -199,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608765335353</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="rewrote (bad style) App.js to redux class component">
+      <created>1608769373135</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608769373135</updated>
+    </task>
+    <task id="LOCAL-00020" summary="rewrote (bad style) App.js to redux class component">
+      <created>1608769540737</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608769540737</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +250,9 @@
     <MESSAGE value="added proptypes" />
     <MESSAGE value="starting redux, added some kind of storage + filters.js" />
     <MESSAGE value="save before refactoring all hooks to redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="save before refactoring all hooks to redux" />
+    <MESSAGE value="rewrote (bad style) App.js to redux container" />
+    <MESSAGE value="rewrote (bad style) App.js to redux class component" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrote (bad style) App.js to redux class component" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="392" width="525" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1608735076744">
@@ -272,10 +292,10 @@
     </state>
     <state x="477" y="188" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1608717014332" />
     <state x="881" y="1080" width="1022" height="1080" key="SettingsEditor/56.27.1864.2133@56.27.1864.2133" timestamp="1608733248594" />
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608757796926">
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1608769545748">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>
-    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608757796926" />
+    <state x="583" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/56.27.1864.2133@56.27.1864.2133" timestamp="1608769545748" />
     <state x="396" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608740299251">
       <screen x="56" y="27" width="1864" height="2133" />
     </state>

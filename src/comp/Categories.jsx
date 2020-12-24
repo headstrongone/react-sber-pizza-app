@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
-function Categories({items}){
+import React, {useState, memo} from 'react';
+
+//см. Sort.jsx
+
+const Categories = memo(function Categories({items, onClickItem}){
     const [state, setState] = useState(0);
 
     const onSelectItem = (index) => {
         setState(index);
+        onClickItem(index)
     }
     return (
         <div className="categories">
@@ -19,6 +23,6 @@ function Categories({items}){
             </ul>
         </div>
     );
-}
+});
 
 export default Categories;
