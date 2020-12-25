@@ -26,7 +26,7 @@ const CartBody = ({element, id, name, type, size, totalPrice, totalCount, onRemo
             </div>
             <div className="cart__item-info">
                 <h3>{name}</h3>
-                <p>{type} тесто, {size} см.</p>
+                <p>{type}, {size} см.</p>
             </div>
             <div className="cart__item-count">
                 <Button

@@ -98,6 +98,33 @@ const cart = (state = initialState, action) => {
         };
     }
 
+    if (action.type === 'DELETE_FROM_CART') {
+        const currentPizzaItems = !state.totalItems[action.payload.id] ?
+            [action.payload] :
+            [...state.totalItems[action.payload.id].totalItems].slice(1);
+
+        const newItems = {
+            ...state.totalItems,
+            [action.payload.id]: {
+                totalItems: currentPizzaItems,
+                totalPrice: getTotalPrice(currentPizzaItems),
+            },
+        };
+
+
+        const _items = Object.values(newItems).map(obj => obj.totalItems);
+        const allPizzas = [].concat.apply([], _items);
+        const totalPrice = getTotalPrice(allPizzas);
+
+
+        return {
+            ...state,
+            totalItems: newItems,
+            totalCount: allPizzas.length,
+            totalPrice: totalPrice,
+        };
+    }
+
 
     if (action.type === 'ON_PLUS_CART') {
         const newObjItems = [

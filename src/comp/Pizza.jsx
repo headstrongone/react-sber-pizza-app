@@ -85,7 +85,7 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
                 <div className="pizza-block__price">{`${cost[price]} ₽`}</div>
                 <div className="pizza-block__buttons">
                 {
-                    totalAdded && <Button
+                    totalAdded ? <Button
                         onClick={handleDeletePizza}
                         className='button--add'
                         outline>
@@ -101,7 +101,7 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
                              4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
                             />
                         </svg>
-                    </Button>
+                    </Button> : ''
                 }
                     <Button
                         onClick={handleAddPizza}

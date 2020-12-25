@@ -28,13 +28,15 @@ const Cart = () => {
         dispatch(onMinusCart(id));
     }
 
-    const groupOfPizzas = Object.keys(totalItems).map(key => {
-        return totalItems[key].totalItems[0];
+    const groupOfPizzas = Object.keys(totalItems).map((key, index) => {
+        return totalItems[key].totalItems[index];
     });
 
+    console.log(totalItems)
     const onRemoveItem = (id) => {
         dispatch(removeCartItem(id))
     }
+
 
     return (
         <div className="container container--cart">
@@ -75,8 +77,9 @@ const Cart = () => {
 
                     <div className="content__items">
                         {
-                            groupOfPizzas.map((element) =>
+                            groupOfPizzas.filter((element) => element !== undefined).map((element) =>
                                 <CartBody
+                                    key={`${element.id}_${element.name}`}
                                     element={element}
                                     id={element.id}
                                     name={element.name}
