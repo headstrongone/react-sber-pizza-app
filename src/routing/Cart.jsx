@@ -28,11 +28,11 @@ const Cart = () => {
         dispatch(onMinusCart(id));
     }
 
-    const groupOfPizzas = Object.keys(totalItems).map((key, index) => {
-        return totalItems[key].totalItems[index];
+    const groupOfPizzas = Object.keys(totalItems).map((key) => {
+        return totalItems[key].totalItems[0];
     });
 
-    console.log(totalItems)
+    console.log(groupOfPizzas)
     const onRemoveItem = (id) => {
         dispatch(removeCartItem(id))
     }
