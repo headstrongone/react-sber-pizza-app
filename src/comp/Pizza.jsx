@@ -84,6 +84,25 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
             <div className="pizza-block__bottom">
                 <div className="pizza-block__price">{`${cost[price]} ₽`}</div>
                 <div className="pizza-block__buttons">
+                {
+                    totalAdded && <Button
+                        onClick={handleDeletePizza}
+                        className='button--add'
+                        outline>
+                        <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017
+                             -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998
+                             4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
+                            />
+                        </svg>
+                    </Button>
+                }
                     <Button
                         onClick={handleAddPizza}
                         className='button--add'
@@ -101,23 +120,6 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
                             />
                         </svg>
                         {totalAdded ? <i>{totalAdded}</i> : ''}
-                    </Button>
-                    <Button
-                        onClick={handleDeletePizza}
-                        className='button--add'
-                        outline>
-                        <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 10"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017
-                             -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998
-                             4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
-                            />
-                        </svg>
                     </Button>
                 </div>
             </div>

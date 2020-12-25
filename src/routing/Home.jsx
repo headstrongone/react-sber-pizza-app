@@ -66,7 +66,7 @@ const Home = () => {
                                types={obj.types}
                                addPizzaToCard={onAddPizzaToCard}
                                deletePizzaFromCard={onPizzaDeleteFromCard}
-                               totalAdded={cartItems[obj.id] ? cartItems[obj.id].length : ''}
+                               totalAdded={cartItems[obj.id] ? cartItems[obj.id].totalItems.length : ''}
                         />)
                     ) : Array(10).fill(0).map((el, key) => <PizzaContentLoader key={key}/>)
                 }
