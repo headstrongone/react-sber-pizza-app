@@ -6,14 +6,17 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
     const [size, setSize] = useState(0);
     const [type, setType] = useState(0);
     const [price, setPrice] = useState(0);
+    const [indexOfImage, setIndexOfImage] = useState(0);
 
     const onSelectSize = (index) => {
         setSize(index);
         setPrice(index);
     }
 
+
     const onSelectType = (index) => {
         setType(index);
+        setIndexOfImage(index);
     }
 
     const handleAddPizza = () => {
@@ -50,7 +53,7 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
         <div className="pizza-block">
             <img
                 className="pizza-block__image"
-                src={image}
+                src={image[indexOfImage]}
                 alt="Pizza"
             />
             <h4 className="pizza-block__title">{name}</h4>
@@ -73,7 +76,7 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
                             onClick={() => onSelectSize(index)}
                             className={size === index ? 'active' : ''}
                             key={`${item}_${index}`}>
-                            {item}
+                            {`${item} см`}
                         </li>
                     ))}
                 </ul>
@@ -124,7 +127,7 @@ const Pizza = ({ id, name, cost, image, types, sizes, addPizzaToCard, deletePizz
 
 Pizza.propTypes = {
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.arrayOf(PropTypes.string).isRequired,
     cost: PropTypes.array.isRequired,
     types: PropTypes.arrayOf(PropTypes.string).isRequired,
     sizes: PropTypes.arrayOf(PropTypes.number).isRequired

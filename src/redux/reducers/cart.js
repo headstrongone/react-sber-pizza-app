@@ -30,9 +30,6 @@ const cart = (state = initialState, action) => {
             [action.payload.id]: !state.totalItems[action.payload.id] ? [action.payload] :
                 [...state.totalItems[action.payload.id], action.payload],
         };
-
-        console.log(newItems);
-
         return {
             ...state,
             totalItems: newItems,
@@ -46,8 +43,7 @@ const cart = (state = initialState, action) => {
             ...state.totalItems,
         };
 
-        newItems[action.payload.id] &&
-        newItems[action.payload.id].shift();
+        newItems[action.payload.id] && newItems[action.payload.id].shift();
 
         return {
             totalItems: newItems,
