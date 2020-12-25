@@ -18,7 +18,7 @@ body {
 }
 
 .content {
-  padding: 40px 0;
+  padding: 0 0;
 
   &__title {
     margin: 35px 0;
@@ -44,7 +44,8 @@ body {
 
   &--cart {
     max-width: 820px;
-    margin: 0px auto;
+    margin: 50px auto;
+    padding: 0px 0px 50px 0px;
     .content__title {
       margin: 0;
     }

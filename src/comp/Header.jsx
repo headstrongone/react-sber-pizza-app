@@ -15,7 +15,7 @@ function Header() {
             <div className="container">
                 <Link to="/">
                     <div className="header__logo">
-                    <img width="38" src={mainLogo} alt="Pizza logo"/>
+                    <img width="65" src={mainLogo} alt="Pizza logo"/>
                     <div>
                         <h1>Sber Pizza</h1>
                         <p>the best pizza in the whole world.</p>
