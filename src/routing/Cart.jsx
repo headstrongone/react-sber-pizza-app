@@ -10,31 +10,66 @@ const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const {totalItems, totalPrice, totalCount} = useSelector((state) => ({
+    const {totalItems, totalPrice, totalCount,  totals} = useSelector((state) => ({
         totalItems: state.cartReducer.totalItems,
         totalPrice: state.cartReducer.totalPrice,
-        totalCount: state.cartReducer.totalCount
+        totalCount: state.cartReducer.totalCount,
+        totals: state.cartReducer.totalItems.totals,
     }));
 
     const onClearCart = () => {
         dispatch(clearCart());
     }
 
-    const onAddPizza = (id) => {
-        dispatch(onPlusCart(id));
+    const onAddPizza = (element) => {
+        dispatch(onPlusCart(element));
     }
 
-    const onDeletePizza = (id) => {
-        dispatch(onMinusCart(id));
+    const onDeletePizza = (element) => {
+        dispatch(onMinusCart(element));
     }
 
-    const groupOfPizzas = Object.keys(totalItems).map((key) => {
-        return totalItems[key].totalItems[0];
-    });
+    const mObj = JSON.parse(JSON.stringify(totalItems));;
 
-    console.log(groupOfPizzas)
-    const onRemoveItem = (id) => {
-        dispatch(removeCartItem(id))
+    const filteredArr = () => {
+        const array = Object.keys(mObj)
+            .map((key) => {
+                return mObj[key].totalItems.reduce((acc, current) => {
+                    const x = acc.find(item => item.size === current.size && item.type === current.type);
+                    if (!x) {
+                        return acc.concat([current]);
+                    } else {
+                        return acc;
+                    }
+                }, []);
+            });
+        return [].concat.apply([], array);
+    }
+
+    const pizzaArray = filteredArr();
+
+    const onRemoveItem = (element) => {
+        dispatch(removeCartItem(element))
+    }
+
+    const pushPizzaSizeToCart = (id, size) => {
+        if (size === 25) {
+            return totalItems[id].totalPriceBySize.totalPrice25
+        } else if (size === 30){
+            return totalItems[id].totalPriceBySize.totalPrice30
+        } else {
+            return totalItems[id].totalPriceBySize.totalPrice35
+        }
+    }
+
+    const pushPizzaCountToCart = (id, size) => {
+        if (size === 25) {
+            return totalItems[id].totalCountBySize.totalCount25
+        } else if (size === 30){
+            return totalItems[id].totalCountBySize.totalCount30
+        } else {
+            return totalItems[id].totalCountBySize.totalCount35
+        }
     }
 
 
@@ -77,16 +112,17 @@ const Cart = () => {
 
                     <div className="content__items">
                         {
-                            groupOfPizzas.filter((element) => element !== undefined).map((element) =>
+                            pizzaArray.filter((element) => element !== undefined).map((element) =>
                                 <CartBody
-                                    key={`${element.id}_${element.name}`}
+                                    key={`${element.id}_${element.name}_${element.size}_${element.type}`}
                                     element={element}
+                                    image={element.image}
                                     id={element.id}
                                     name={element.name}
                                     type={element.type}
                                     size={element.size}
-                                    totalPrice={totalItems[element.id].totalPrice}
-                                    totalCount={totalItems[element.id].totalItems.length}
+                                    totalPrice={pushPizzaSizeToCart(element.id, element.size)}
+                                    totalCount={pushPizzaCountToCart(element.id, element.size)}
                                     onRemoveCartItem={onRemoveItem}
                                     addPizza={onAddPizza}
                                     deletePizza={onDeletePizza}

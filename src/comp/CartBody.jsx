@@ -1,18 +1,18 @@
 import React from 'react';
 import Button from './Button'
 
-const CartBody = ({element, id, name, type, size, totalPrice, totalCount, onRemoveCartItem, addPizza, deletePizza}) => {
+const CartBody = ({element, image, id, name, type, size, totalPrice, totalCount, onRemoveCartItem, addPizza, deletePizza}) => {
 
     const handleRemoveClick = () => {
-        onRemoveCartItem(id);
+        onRemoveCartItem(element);
     }
 
     const handleAddPizza = () => {
-        addPizza(id);
+        addPizza(element);
     }
 
     const handleDeletePizza = () => {
-        deletePizza(id);
+        deletePizza(element);
     }
 
     return (
@@ -20,7 +20,7 @@ const CartBody = ({element, id, name, type, size, totalPrice, totalCount, onRemo
             <div className="cart__item-img">
                 <img
                     className="pizza-block__image"
-                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                    src={type === 'Стандартная' ? image[0] : image[1]}
                     alt="Pizza"
                 />
             </div>

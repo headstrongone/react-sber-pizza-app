@@ -4,6 +4,18 @@ const initialState = {
     totalCount: 0
 };
 
+const getPizzaSizePrice = (currentPizzaItems, _size) => {
+    return currentPizzaItems
+        .filter(({size}) => size === _size)
+        .reduce((sum, obj) => obj.price + sum, 0);
+};
+
+const getPizzaSizeCount = (currentPizzaItems, _size) => {
+    return currentPizzaItems
+        .filter(({size}) => size === _size)
+        .reduce((sum, obj) =>  sum + 1, 0);
+};
+
 const getTotalPrice = arr => arr.reduce((sum, obj) => obj.price + sum, 0);
 
 const _get = (obj, path) => {
@@ -46,7 +58,6 @@ const cart = (state = initialState, action) => {
     }
 
 
-
     if (action.type === 'SET_TOTAL_ITEMS') {
         return {
             ...state,
@@ -55,21 +66,43 @@ const cart = (state = initialState, action) => {
     }
 
     if (action.type === 'REMOVE_CART_ITEM') {
-        const newItems = {
+        const Items = {
             ...state.totalItems,
         }
+        const _size = action.payload.size;
 
-        const price = newItems[action.payload].totalPrice;
-        const count = newItems[action.payload].totalItems.length;
+        const filterArray = Items[action.payload.id].totalItems.filter(({size}) => size !== _size);
 
-        delete newItems[action.payload]
-        console.log(count)
+        const totalPriceBySize = {
+            totalPrice25: getPizzaSizePrice(filterArray, 25),
+            totalPrice30: getPizzaSizePrice(filterArray, 30),
+            totalPrice35: getPizzaSizePrice(filterArray, 35),
+        };
+
+        const totalCountBySize = {
+            totalCount25: getPizzaSizeCount(filterArray, 25),
+            totalCount30: getPizzaSizeCount(filterArray, 30),
+            totalCount35: getPizzaSizeCount(filterArray, 35),
+        };
+
+        const newItems = {
+            ...state.totalItems,
+            [action.payload.id]: {
+                totalItems: filterArray,
+                totalPrice: getTotalPrice(filterArray),
+                totalPriceBySize,
+                totalCountBySize,
+            },
+        };
+
+        const totalCount = getTotalSum(newItems, 'totalItems.length');
+        const totalPrice = getTotalSum(newItems, 'totalPrice');
 
         return {
             ...state,
             totalItems: newItems,
-            totalPrice: state.totalPrice - price,
-            totalCount: state.totalCount - count,
+            totalPrice: totalPrice,
+            totalCount: totalCount,
         };
     }
 
@@ -78,11 +111,25 @@ const cart = (state = initialState, action) => {
             [action.payload] :
             [...state.totalItems[action.payload.id].totalItems, action.payload];
 
-        const newItems = {
+       const totalPriceBySize = {
+            totalPrice25: getPizzaSizePrice(currentPizzaItems, 25),
+            totalPrice30: getPizzaSizePrice(currentPizzaItems, 30),
+            totalPrice35: getPizzaSizePrice(currentPizzaItems, 35),
+       };
+
+        const totalCountBySize = {
+            totalCount25: getPizzaSizeCount(currentPizzaItems, 25),
+            totalCount30: getPizzaSizeCount(currentPizzaItems, 30),
+            totalCount35: getPizzaSizeCount(currentPizzaItems, 35),
+        };
+
+       const newItems = {
             ...state.totalItems,
             [action.payload.id]: {
                 totalItems: currentPizzaItems,
                 totalPrice: getTotalPrice(currentPizzaItems),
+                totalPriceBySize,
+                totalCountBySize,
             },
         };
 
@@ -99,15 +146,40 @@ const cart = (state = initialState, action) => {
     }
 
     if (action.type === 'DELETE_FROM_CART') {
+
         const currentPizzaItems = !state.totalItems[action.payload.id] ?
             [action.payload] :
-            [...state.totalItems[action.payload.id].totalItems].slice(1);
+            [...state.totalItems[action.payload.id].totalItems];
+
+
+            for (let i = 0; i < currentPizzaItems.length; i++){
+                if (action.payload.type === currentPizzaItems[i].type && action.payload.size === currentPizzaItems[i].size){
+                    currentPizzaItems.splice(i, 1);
+                    break;
+                }
+            }
+
+
+        const totalPriceBySize = {
+            totalPrice25: getPizzaSizePrice(currentPizzaItems, 25),
+            totalPrice30: getPizzaSizePrice(currentPizzaItems, 30),
+            totalPrice35: getPizzaSizePrice(currentPizzaItems, 35),
+        };
+
+        const totalCountBySize = {
+            totalCount25: getPizzaSizeCount(currentPizzaItems, 25),
+            totalCount30: getPizzaSizeCount(currentPizzaItems, 30),
+            totalCount35: getPizzaSizeCount(currentPizzaItems, 35),
+        };
+
 
         const newItems = {
             ...state.totalItems,
             [action.payload.id]: {
                 totalItems: currentPizzaItems,
                 totalPrice: getTotalPrice(currentPizzaItems),
+                totalPriceBySize,
+                totalCountBySize,
             },
         };
 
@@ -128,14 +200,31 @@ const cart = (state = initialState, action) => {
 
     if (action.type === 'ON_PLUS_CART') {
         const newObjItems = [
-            ...state.totalItems[action.payload].totalItems,
-            state.totalItems[action.payload].totalItems[0],
+            ...state.totalItems[action.payload.id].totalItems,
+            action.payload,
         ];
+
+
+
+        const totalPriceBySize = {
+            totalPrice25: getPizzaSizePrice(newObjItems, 25),
+            totalPrice30: getPizzaSizePrice(newObjItems, 30),
+            totalPrice35: getPizzaSizePrice(newObjItems, 35),
+        };
+
+        const totalCountBySize = {
+            totalCount25: getPizzaSizeCount(newObjItems, 25),
+            totalCount30: getPizzaSizeCount(newObjItems, 30),
+            totalCount35: getPizzaSizeCount(newObjItems, 35),
+        };
+
         const newItems = {
             ...state.totalItems,
-            [action.payload]: {
+            [action.payload.id]: {
                 totalItems: newObjItems,
                 totalPrice: getTotalPrice(newObjItems),
+                totalPriceBySize,
+                totalCountBySize,
             },
         };
 
@@ -151,16 +240,37 @@ const cart = (state = initialState, action) => {
     }
 
     if (action.type === 'ON_MINUS_CART') {
-        const oldItems = state.totalItems[action.payload].totalItems;
-        const newObjItems = oldItems.length > 1 ?
-            state.totalItems[action.payload].totalItems.slice(1)
-            : oldItems;
+        const newObjItems = state.totalItems[action.payload.id].totalItems
+
+        if (newObjItems.length > 1){
+            for (let i = 0; i < newObjItems.length; i++){
+                if (action.payload.type === newObjItems[i].type && action.payload.size === newObjItems[i].size){
+                    newObjItems.splice(i, 1);
+                    break;
+                }
+            }
+        }
+
+        const totalPriceBySize = {
+            totalPrice25: getPizzaSizePrice(newObjItems, 25),
+            totalPrice30: getPizzaSizePrice(newObjItems, 30),
+            totalPrice35: getPizzaSizePrice(newObjItems, 35),
+        };
+
+        const totalCountBySize = {
+            totalCount25: getPizzaSizeCount(newObjItems, 25),
+            totalCount30: getPizzaSizeCount(newObjItems, 30),
+            totalCount35: getPizzaSizeCount(newObjItems, 35),
+        };
+
 
         const newItems = {
             ...state.totalItems,
-            [action.payload]: {
+            [action.payload.id]: {
                 totalItems: newObjItems,
                 totalPrice: getTotalPrice(newObjItems),
+                totalPriceBySize,
+                totalCountBySize,
             },
         };
 
@@ -174,9 +284,6 @@ const cart = (state = initialState, action) => {
             totalPrice,
         };
     }
-
-
-
 
     return state;
 };
