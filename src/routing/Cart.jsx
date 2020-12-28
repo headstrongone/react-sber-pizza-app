@@ -10,78 +10,31 @@ const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const {totalItems, totalPrice, totalCount,  totals} = useSelector((state) => ({
+    const {totalItems, totalPrice, totalCount} = useSelector((state) => ({
         totalItems: state.cartReducer.totalItems,
         totalPrice: state.cartReducer.totalPrice,
-        totalCount: state.cartReducer.totalCount,
-        totals: state.cartReducer.totalItems.totals,
+        totalCount: state.cartReducer.totalCount
     }));
 
     const onClearCart = () => {
         dispatch(clearCart());
     }
 
-    const onAddPizza = (element) => {
-        dispatch(onPlusCart(element));
+    const onAddPizza = (id) => {
+        dispatch(onPlusCart(id));
     }
 
-    const onDeletePizza = (element) => {
-        dispatch(onMinusCart(element));
+    const onDeletePizza = (id) => {
+        dispatch(onMinusCart(id));
     }
 
-    const mObj = JSON.parse(JSON.stringify(totalItems));;
+    const groupOfPizzas = Object.keys(totalItems).map((key) => {
+        return totalItems[key].totalItems[0];
+    });
 
-    const filteredArr = () => {
-        const array = Object.keys(mObj)
-            .map((key) => {
-                return mObj[key].totalItems.reduce((acc, current) => {
-                    const x = acc.find(item => item.size === current.size && item.type === current.type);
-                    if (!x) {
-                        return acc.concat([current]);
-                    } else {
-                        return acc;
-                    }
-                }, []);
-            });
-        return [].concat.apply([], array);
-    }
-
-    const pizzaArray = filteredArr();
-
-    const onRemoveItem = (element) => {
-        dispatch(removeCartItem(element))
-    }
-
-    const pushPizzaSizeToCart = (id, type, size) => {
-        if (size === 25 && type === 'Стандартная') {
-            return totalItems[id].totalPriceBySize.totalPrice25;
-        } else if (size === 30 && type === 'Стандартная'){
-            return totalItems[id].totalPriceBySize.totalPrice30;
-        } else if (size === 35 && type === 'Стандартная') {
-            return totalItems[id].totalPriceBySize.totalPrice35;
-        } else if (size === 25 && type === 'Тонкая') {
-            return  totalItems[id].totalPriceBySizeThin.totalPrice25;
-        } else if (size === 30 && type === 'Тонкая') {
-            return  totalItems[id].totalPriceBySizeThin.totalPrice30;
-        } else if (size === 35 && type === 'Тонкая') {
-            return  totalItems[id].totalPriceBySizeThin.totalPrice35;
-        }
-    }
-
-    const pushPizzaCountToCart = (id, type, size) => {
-        if (size === 25 && type === 'Стандартная') {
-            return totalItems[id].totalCountBySize.totalCount25;
-        } else if (size === 30 && type === 'Стандартная'){
-            return totalItems[id].totalCountBySize.totalCount30;
-        } else if (size === 35 && type === 'Стандартная') {
-            return totalItems[id].totalCountBySize.totalCount35;
-        } else if (size === 25 && type === 'Тонкая') {
-            return  totalItems[id].totalCountBySizeThin.totalCount25;
-        } else if (size === 30 && type === 'Тонкая') {
-            return  totalItems[id].totalCountBySizeThin.totalCount30;
-        } else if (size === 35 && type === 'Тонкая') {
-            return  totalItems[id].totalCountBySizeThin.totalCount35;
-        }
+    console.log(groupOfPizzas)
+    const onRemoveItem = (id) => {
+        dispatch(removeCartItem(id))
     }
 
 
@@ -124,17 +77,16 @@ const Cart = () => {
 
                     <div className="content__items">
                         {
-                            pizzaArray.filter((element) => element !== undefined).map((element) =>
+                            groupOfPizzas.filter((element) => element !== undefined).map((element) =>
                                 <CartBody
-                                    key={`${element.id}_${element.name}_${element.size}_${element.type}`}
+                                    key={`${element.id}_${element.name}`}
                                     element={element}
-                                    image={element.image}
                                     id={element.id}
                                     name={element.name}
                                     type={element.type}
                                     size={element.size}
-                                    totalPrice={pushPizzaSizeToCart(element.id, element.type, element.size)}
-                                    totalCount={pushPizzaCountToCart(element.id, element.type, element.size)}
+                                    totalPrice={totalItems[element.id].totalPrice}
+                                    totalCount={totalItems[element.id].totalItems.length}
                                     onRemoveCartItem={onRemoveItem}
                                     addPizza={onAddPizza}
                                     deletePizza={onDeletePizza}
