@@ -28,15 +28,60 @@ const Cart = () => {
         dispatch(onMinusCart(id));
     }
 
-    const groupOfPizzas = Object.keys(totalItems).map((key) => {
-        return totalItems[key].totalItems[0];
-    });
+    const mObj = JSON.parse(JSON.stringify(totalItems));
 
-    console.log(groupOfPizzas)
+    const filteredArr = () => {
+        const array = Object.keys(mObj)
+            .map((key) => {
+                return mObj[key].totalItems.reduce((acc, current) => {
+                    const x = acc.find(item => item.size === current.size && item.type === current.type);
+                    if (!x) {
+                        return acc.concat([current]);
+                    } else {
+                        return acc;
+                    }
+                }, []);
+            });
+        return [].concat.apply([], array);
+    }
+
+    const pizzaArray = filteredArr();
+
     const onRemoveItem = (id) => {
         dispatch(removeCartItem(id))
     }
 
+    const totalPriceRef = (id, type, size) => {
+        if (size === 25 && type === 'Стандартная'){
+            return totalItems[id].totalPriceBySize.totalPrice25;
+        } else if (size === 30 && type === 'Стандартная'){
+            return totalItems[id].totalPriceBySize.totalPrice30;
+        } else if (size === 35 && type === 'Стандартная'){
+            return totalItems[id].totalPriceBySize.totalPrice35;
+        } else if (size === 25 && type === 'Тонкая'){
+            return totalItems[id].totalPriceBySizeThin.totalPrice25;
+        } else if (size === 30 && type === 'Тонкая'){
+            return totalItems[id].totalPriceBySizeThin.totalPrice30;
+        } else if (size === 35 && type === 'Тонкая'){
+            return totalItems[id].totalPriceBySizeThin.totalPrice35;
+        }
+    }
+
+    const totalCountRef = (id, type, size) => {
+        if (size === 25 && type === 'Стандартная'){
+            return totalItems[id].totalCountBySize.totalCount25;
+        } else if (size === 30 && type === 'Стандартная'){
+            return totalItems[id].totalCountBySize.totalCount30;
+        } else if (size === 35 && type === 'Стандартная'){
+            return totalItems[id].totalCountBySize.totalCount35;
+        } else if (size === 25 && type === 'Тонкая'){
+            return totalItems[id].totalCountBySizeThin.totalCount25;
+        } else if (size === 30 && type === 'Тонкая'){
+            return totalItems[id].totalCountBySizeThin.totalCount30;
+        } else if (size === 35 && type === 'Тонкая'){
+            return totalItems[id].totalCountBySizeThin.totalCount35;
+        }
+    }
 
     return (
         <div className="container container--cart">
@@ -77,16 +122,17 @@ const Cart = () => {
 
                     <div className="content__items">
                         {
-                            groupOfPizzas.filter((element) => element !== undefined).map((element) =>
+                            pizzaArray.filter((element) => element !== undefined).map((element) =>
                                 <CartBody
-                                    key={`${element.id}_${element.name}`}
+                                    key={`${element.id}_${element.name}_${element.size}_${element.type}`}
                                     element={element}
+                                    image={element.image}
                                     id={element.id}
                                     name={element.name}
                                     type={element.type}
                                     size={element.size}
-                                    totalPrice={totalItems[element.id].totalPrice}
-                                    totalCount={totalItems[element.id].totalItems.length}
+                                    totalPrice={totalPriceRef(element.id, element.type, element.size)}
+                                    totalCount={totalCountRef(element.id, element.type, element.size)}
                                     onRemoveCartItem={onRemoveItem}
                                     addPizza={onAddPizza}
                                     deletePizza={onDeletePizza}
