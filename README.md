@@ -1,7 +1,7 @@
 # React Pizza Store
 #### Посмотреть, как работает приложение, можно здесь
 
-        https:// 
+    https://react-sber-pizza.herokuapp.com/
 
 #### Стек, используемый в разработке
 
